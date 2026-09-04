@@ -186,17 +186,39 @@ export const CheckoutModal: React.FC<{ isOpen: boolean; onClose: () => void }> =
               Pagamento Confirmado!
             </h3>
             <p className="text-sm text-gray-600 font-semibold mb-6">
-              O link de acesso com os 5 cadernos em PDF foi enviado para o seu WhatsApp e E-mail!
+              Seu acesso ao Kit Completo foi liberado imediatamente!
             </p>
-            <button
-              onClick={() => {
-                setIsSuccess(false);
-                onClose();
-              }}
-              className="bg-emerald-600 text-white font-black px-6 py-3 rounded-xl uppercase tracking-wider text-xs cursor-pointer shadow-md"
-            >
-              Concluir
-            </button>
+            <div className="space-y-2">
+              <button
+                onClick={() => {
+                  localStorage.setItem(
+                    'membros_auth',
+                    JSON.stringify({
+                      email: 'cliente@mundocursivo.com.br',
+                      name: 'Novo Aluno VIP',
+                      loggedInAt: Date.now(),
+                    })
+                  );
+                  setIsSuccess(false);
+                  onClose();
+                  window.history.pushState({}, '', '/membros');
+                  window.dispatchEvent(new PopStateEvent('popstate'));
+                }}
+                className="w-full bg-[#12B856] hover:bg-[#0e9645] text-white font-black px-6 py-3 rounded-xl uppercase tracking-wider text-xs cursor-pointer shadow-md transition"
+              >
+                🚀 Acessar Área de Membros Agora
+              </button>
+
+              <button
+                onClick={() => {
+                  setIsSuccess(false);
+                  onClose();
+                }}
+                className="w-full bg-gray-100 hover:bg-gray-200 text-gray-600 font-bold px-6 py-2.5 rounded-xl uppercase tracking-wider text-[11px] cursor-pointer"
+              >
+                Fechar
+              </button>
+            </div>
           </div>
         )}
 

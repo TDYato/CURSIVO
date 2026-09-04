@@ -1,0 +1,10 @@
+Coloque aqui os seus 6 arquivos PDF originais:
+
+1. alfabeto Cursivo 03 (1).pdf
+2. produção de frases cursiva 04 (1).pdf
+3. frases cursiva 06 (1).pdf
+4. coordenacao-aplicada-modulo-2-3 (1).pdf
+5. silabário Cursivo 05 (1).pdf
+6. caderno prático módulo 2 (1).pdf
+
+Qualquer arquivo PDF colocado nesta pasta será automaticamente servido e baixado diretamente pelos usuários!

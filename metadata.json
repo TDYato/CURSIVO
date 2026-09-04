@@ -1,6 +1,6 @@
 {
   "name": "Mundo Cursivo - Kit de Caligrafia Infantil",
-  "description": "Landing Page de alta conversão para o Kit de Caligrafia Infantil Mundo Cursivo com mais de 350 atividades de caligrafia.",
+  "description": "Plataforma e Landing Page de alta conversão para o Kit de Caligrafia Infantil Mundo Cursivo, incluindo Área de Membros VIP (Ebookoteca) com download dos cadernos em PDF.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

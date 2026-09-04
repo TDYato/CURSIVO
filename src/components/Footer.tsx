@@ -15,10 +15,10 @@ export const Footer: React.FC = () => {
           <SecuritySeals />
         </div>
 
-        {/* Contact Info */}
+        {/* Contact Info & Member Area */}
         <div className="flex flex-col items-center md:items-start space-y-2 border-t md:border-t-0 pt-6 md:pt-0 border-gray-200">
           <h4 className="font-extrabold text-gray-800 uppercase tracking-wider text-sm mb-1">
-            Contato
+            Contato & Acesso
           </h4>
           <a
             href="https://wa.me/5599984283075"
@@ -39,6 +39,21 @@ export const Footer: React.FC = () => {
           <div className="flex items-center space-x-2 text-gray-700 font-bold">
             <span>📷</span>
             <span>@atividadescursiva</span>
+          </div>
+
+          <div className="pt-2">
+            <a
+              href="/login"
+              onClick={(e) => {
+                e.preventDefault();
+                window.history.pushState({}, '', '/login');
+                window.dispatchEvent(new PopStateEvent('popstate'));
+              }}
+              className="inline-flex items-center gap-1.5 text-xs font-black text-sky-700 hover:text-sky-900 bg-sky-50 hover:bg-sky-100 px-3 py-1.5 rounded-lg border border-sky-200 transition cursor-pointer"
+            >
+              <span>🔐</span>
+              <span>Já é aluno? Acessar Área de Membros</span>
+            </a>
           </div>
         </div>
 
