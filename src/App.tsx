@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { TopAlertBar } from './components/TopAlertBar';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { SignalsSection } from './components/SignalsSection';
@@ -145,6 +146,9 @@ export default function App() {
   // Route: / (Landing Page)
   return (
     <div className="min-h-screen bg-white text-gray-800 font-['Montserrat',sans-serif] antialiased flex flex-col selection:bg-sky-500 selection:text-white">
+      {/* Top Urgency Alert Bar */}
+      <TopAlertBar onCtaClick={scrollToOffer} />
+
       {/* Main Content Sections */}
       <main className="flex-1">
         {/* Hero Section */}

@@ -20,8 +20,8 @@ export const Hero: React.FC<{ onCtaClick: () => void }> = ({ onCtaClick }) => {
           </div>
 
           {/* Headline */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-4 tracking-tight uppercase">
-            A LETRA DO SEU FILHO TA DIFÍCIL DE ENTENDER?
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-4 tracking-tight">
+            Em apenas 7 dias, seu filho vai ter a letra mais bonita da turminha!
           </h1>
 
           {/* Subtitle */}
