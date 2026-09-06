@@ -170,8 +170,8 @@ export default function App() {
         onClose={handleCloseDownsell}
         onAccept={handleAcceptDownsell}
         onDecline={handleDeclineDownsell}
-        checkoutUrl="https://pay.kiwify.com.br/bXd3PL9"
-        basicPlanCheckoutUrl="https://pay.kiwify.com.br/lQDvHZo"
+        checkoutUrl="https://pay.kiwify.com.br/OdqJHQx"
+        basicPlanCheckoutUrl="https://pay.kiwify.com.br/l57iZjl"
       />
     </div>
   );

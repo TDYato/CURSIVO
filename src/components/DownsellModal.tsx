@@ -14,8 +14,8 @@ export const DownsellModal: React.FC<DownsellModalProps> = ({
   onClose,
   onAccept,
   onDecline,
-  checkoutUrl = 'https://pay.kiwify.com.br/bXd3PL9',
-  basicPlanCheckoutUrl = 'https://pay.kiwify.com.br/lQDvHZo',
+  checkoutUrl = 'https://pay.kiwify.com.br/OdqJHQx',
+  basicPlanCheckoutUrl = 'https://pay.kiwify.com.br/l57iZjl',
 }) => {
   // Close on Escape key
   useEffect(() => {
@@ -166,7 +166,7 @@ export const DownsellModal: React.FC<DownsellModalProps> = ({
 
         {/* Botão Verde de Ação Principal */}
         <a
-          href="https://pay.kiwify.com.br/bXd3PL9"
+          href={checkoutUrl}
           className="w-full bg-[#12B856] hover:bg-[#0E9E48] text-white font-extrabold py-3.5 sm:py-4 px-5 sm:px-6 rounded-full shadow-lg shadow-emerald-500/20 text-xs sm:text-sm tracking-wide text-center uppercase cursor-pointer flex items-center justify-center gap-2 transition-all duration-200 hover:scale-[1.01] active:scale-[0.99] border-b-4 border-emerald-700"
         >
           <span>SIM, QUERO O PLANO COMPLETO POR R$ 15,90</span>
