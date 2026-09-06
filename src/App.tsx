@@ -5,11 +5,13 @@ import { SignalsSection } from './components/SignalsSection';
 import { MethodSection } from './components/MethodSection';
 import { ActivitiesPreview } from './components/ActivitiesPreview';
 import { SocialProofSection } from './components/SocialProofSection';
+import { BonusSection } from './components/BonusSection';
+import { PlansOfferSection } from './components/PlansOfferSection';
 import { HowItWorks } from './components/HowItWorks';
-import { OfferSection } from './components/OfferSection';
 import { GuaranteeSection } from './components/GuaranteeSection';
 import { Footer } from './components/Footer';
 import { CheckoutModal } from './components/CheckoutModal';
+import { DownsellModal } from './components/DownsellModal';
 import { LoginPage } from './components/LoginPage';
 import { MembersArea } from './components/MembersArea';
 
@@ -29,6 +31,8 @@ export default function App() {
     return !!localStorage.getItem('membros_auth');
   });
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
+  const [isDownsellOpen, setIsDownsellOpen] = useState(false);
+  const [checkoutPlan, setCheckoutPlan] = useState({ title: 'Plano Básico', price: '10,00' });
 
   // Sync with browser navigation (back/forward buttons)
   useEffect(() => {
@@ -72,7 +76,7 @@ export default function App() {
   }, [navigate]);
 
   const scrollToOffer = useCallback(() => {
-    const offerElement = document.getElementById('oferta');
+    const offerElement = document.getElementById('offer') || document.getElementById('oferta');
     if (offerElement) {
       offerElement.scrollIntoView({ behavior: 'smooth' });
     } else {
@@ -80,12 +84,33 @@ export default function App() {
     }
   }, []);
 
-  const handleOpenCheckout = useCallback(() => {
+  const handleOpenCheckout = useCallback((plan?: { title: string; price: string }) => {
+    if (plan) {
+      setCheckoutPlan(plan);
+    }
     setIsCheckoutOpen(true);
   }, []);
 
   const handleCloseCheckout = useCallback(() => {
     setIsCheckoutOpen(false);
+  }, []);
+
+  const handleOpenDownsell = useCallback(() => {
+    setIsDownsellOpen(true);
+  }, []);
+
+  const handleCloseDownsell = useCallback(() => {
+    setIsDownsellOpen(false);
+  }, []);
+
+  const handleAcceptDownsell = useCallback(() => {
+    setIsDownsellOpen(false);
+  }, []);
+
+  const handleDeclineDownsell = useCallback(() => {
+    setIsDownsellOpen(false);
+    setCheckoutPlan({ title: 'Plano Básico', price: '10,00' });
+    setIsCheckoutOpen(true);
   }, []);
 
   // Route: /login
@@ -137,11 +162,14 @@ export default function App() {
         {/* Social Proof Section (Mães e professoras que já usam e recomendam) */}
         <SocialProofSection />
 
+        {/* Bonus Section */}
+        <BonusSection onCtaClick={scrollToOffer} />
+
+        {/* Offer / Plans Section (Escolha o seu plano) */}
+        <PlansOfferSection onBasicPlanClick={handleOpenDownsell} />
+
         {/* How It Works Section */}
         <HowItWorks />
-
-        {/* Special Offer Section (#oferta) */}
-        <OfferSection onBuyClick={handleOpenCheckout} />
 
         {/* 7-Day Satisfaction Guarantee Section */}
         <GuaranteeSection />
@@ -150,10 +178,20 @@ export default function App() {
       {/* Footer */}
       <Footer />
 
+      {/* Downsell Retention Modal (Triggered by Plano Básico) */}
+      <DownsellModal
+        isOpen={isDownsellOpen}
+        onClose={handleCloseDownsell}
+        onAccept={handleAcceptDownsell}
+        onDecline={handleDeclineDownsell}
+      />
+
       {/* Floating Interactive Checkout Modal */}
       <CheckoutModal
         isOpen={isCheckoutOpen}
         onClose={handleCloseCheckout}
+        planTitle={checkoutPlan.title}
+        price={checkoutPlan.price}
       />
     </div>
   );

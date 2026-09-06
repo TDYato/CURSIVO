@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
 
-export const CheckoutModal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({
+export const CheckoutModal: React.FC<{
+  isOpen: boolean;
+  onClose: () => void;
+  planTitle?: string;
+  price?: string;
+}> = ({
   isOpen,
   onClose,
+  planTitle = 'Plano Básico',
+  price = '10,00',
 }) => {
   const [paymentMethod, setPaymentMethod] = useState<'pix' | 'card'>('pix');
   const [isSuccess, setIsSuccess] = useState(false);
@@ -12,7 +19,7 @@ export const CheckoutModal: React.FC<{ isOpen: boolean; onClose: () => void }> =
 
   const handleCopyPix = () => {
     navigator.clipboard?.writeText(
-      '00020126580014BR.GOV.BCB.PIX0136mundocursivo-kit-caligrafia-15real520400005303986540515.005802BR5925Mundo Cursivo Ebookteca6009SAO PAULO62070503***6304E8A2'
+      '00020126580014BR.GOV.BCB.PIX0136mundocursivo-kit-caligrafia-10real520400005303986540510.005802BR5925Mundo Cursivo Ebookteca6009SAO PAULO62070503***6304E8A2'
     );
     setCopiedPix(true);
     setTimeout(() => setCopiedPix(false), 3000);
@@ -43,7 +50,7 @@ export const CheckoutModal: React.FC<{ isOpen: boolean; onClose: () => void }> =
                 Checkout 100% Seguro
               </span>
               <h3 className="text-xl font-black text-gray-900">
-                Garanta Seu Kit por Apenas R$ 15,00
+                Garanta o {planTitle} por Apenas R$ {price}
               </h3>
               <p className="text-xs text-gray-500 font-bold">
                 Acesso imediato enviado via WhatsApp e E-mail.
