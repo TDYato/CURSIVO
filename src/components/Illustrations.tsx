@@ -420,73 +420,16 @@ export const MethodSealIcon: React.FC<{ type: string }> = ({ type }) => {
 
 // Ebook Mockup 3D Stack Graphic (Offer Section)
 export const ProductBundleMockup: React.FC = () => (
-  <div className="relative w-full max-w-xs mx-auto my-3 flex justify-center items-center">
-    <svg viewBox="0 0 320 240" className="w-full h-auto drop-shadow-2xl">
-      <defs>
-        <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
-          <feDropShadow dx="0" dy="8" stdDeviation="6" floodColor="#000000" floodOpacity="0.2" />
-        </filter>
-      </defs>
-
-      {/* Book 1 (Bottom Left - Red) */}
-      <g transform="translate(20, 40) rotate(-12)" filter="url(#shadow)">
-        <rect x="0" y="0" width="120" height="160" rx="6" fill="#ef4444" stroke="#dc2626" strokeWidth="2" />
-        <rect x="8" y="8" width="104" height="144" rx="4" fill="#ffffff" opacity="0.9" />
-        <rect x="12" y="16" width="96" height="24" rx="3" fill="#fee2e2" />
-        <text x="60" y="32" textAnchor="middle" fontSize="10" fontWeight="bold" fill="#dc2626">ALFABETO</text>
-        <text x="60" y="80" textAnchor="middle" fontSize="30">🔤</text>
-        <rect x="20" y="125" width="80" height="14" rx="7" fill="#ef4444" />
-        <text x="60" y="135" textAnchor="middle" fontSize="8" fontWeight="bold" fill="#ffffff">MUNDO CURSIVO</text>
-      </g>
-
-      {/* Book 2 (Bottom Right - Blue) */}
-      <g transform="translate(170, 40) rotate(12)" filter="url(#shadow)">
-        <rect x="0" y="0" width="120" height="160" rx="6" fill="#3b82f6" stroke="#2563eb" strokeWidth="2" />
-        <rect x="8" y="8" width="104" height="144" rx="4" fill="#ffffff" opacity="0.9" />
-        <rect x="12" y="16" width="96" height="24" rx="3" fill="#dbeafe" />
-        <text x="60" y="32" textAnchor="middle" fontSize="9" fontWeight="bold" fill="#1d4ed8">CALIGRAFIA</text>
-        <text x="60" y="80" textAnchor="middle" fontSize="30">✍️</text>
-        <rect x="20" y="125" width="80" height="14" rx="7" fill="#3b82f6" />
-        <text x="60" y="135" textAnchor="middle" fontSize="8" fontWeight="bold" fill="#ffffff">MUNDO CURSIVO</text>
-      </g>
-
-      {/* Book 3 (Middle Stack - Yellow) */}
-      <g transform="translate(95, 20) rotate(-4)" filter="url(#shadow)">
-        <rect x="0" y="0" width="130" height="175" rx="6" fill="#f59e0b" stroke="#d97706" strokeWidth="2" />
-        <rect x="8" y="8" width="114" height="159" rx="4" fill="#ffffff" opacity="0.95" />
-        <rect x="14" y="18" width="102" height="28" rx="4" fill="#fef3c7" />
-        <text x="65" y="35" textAnchor="middle" fontSize="10" fontWeight="extrabold" fill="#b45309">SÍLABAS SIMPLES</text>
-        <text x="65" y="90" textAnchor="middle" fontSize="36">🧩</text>
-        <rect x="20" y="140" width="90" height="16" rx="8" fill="#f59e0b" />
-        <text x="65" y="151" textAnchor="middle" fontSize="9" fontWeight="bold" fill="#ffffff">MUNDO CURSIVO</text>
-      </g>
-
-      {/* Front Book (Center Highlight - Green) */}
-      <g transform="translate(85, 45)" filter="url(#shadow)">
-        <rect x="0" y="0" width="150" height="185" rx="8" fill="#10b981" stroke="#059669" strokeWidth="3" />
-        <rect x="8" y="8" width="134" height="169" rx="6" fill="#ffffff" />
-        
-        {/* Header Ribbon */}
-        <rect x="14" y="16" width="122" height="32" rx="6" fill="#d1fae5" />
-        <text x="75" y="30" textAnchor="middle" fontSize="10" fontWeight="900" fill="#047857">KIT DE CALIGRAFIA</text>
-        <text x="75" y="42" textAnchor="middle" fontSize="8" fontWeight="bold" fill="#065f46">INFANTIL</text>
-
-        {/* Cursive Handwriting sample graphic */}
-        <path d="M 25 70 Q 40 55 55 75 T 90 65 T 125 75" fill="none" stroke="#0284c7" strokeWidth="2.5" />
-        <path d="M 25 90 Q 40 75 55 95 T 90 85 T 125 95" fill="none" stroke="#0284c7" strokeWidth="2.5" />
-        
-        {/* Child pencil illustration */}
-        <circle cx="75" cy="115" r="18" fill="#fef08a" />
-        <text x="75" y="121" textAnchor="middle" fontSize="20">✏️</text>
-
-        {/* Footer Pill */}
-        <rect x="25" y="146" width="100" height="18" rx="9" fill="#10b981" />
-        <text x="75" y="158" textAnchor="middle" fontSize="9" fontWeight="900" fill="#ffffff">350+ ATIVIDADES</text>
-      </g>
-    </svg>
+  <div className="relative w-full max-w-xs sm:max-w-sm mx-auto my-3 flex flex-col items-center justify-center">
+    <img
+      src="https://i.postimg.cc/Hx5fstXs/Gemini-Generated-Image-83hm1883hm1883hm-Picsart-Background-Remover.webp"
+      alt="Coleção de Caligrafia Infantil - Mundo Cursivo"
+      className="w-full h-auto max-h-80 object-contain drop-shadow-2xl"
+      referrerPolicy="no-referrer"
+    />
 
     {/* Offer Badges stacked below */}
-    <div className="absolute -bottom-3 left-0 right-0 flex flex-col items-center space-y-1 z-20">
+    <div className="mt-3 flex flex-col items-center space-y-1 z-20">
       <span className="bg-amber-400 text-gray-900 font-extrabold text-[10px] md:text-xs px-3 py-1 rounded-full shadow-md uppercase tracking-wide border border-amber-300">
         ATIVIDADES FÁCEIS DE APLICAR
       </span>

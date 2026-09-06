@@ -33,7 +33,7 @@ export const Hero: React.FC<{ onCtaClick: () => void }> = ({ onCtaClick }) => {
           <div className="block md:hidden w-full mb-6">
             <button
               onClick={onCtaClick}
-              className="w-full bg-[#12B856] hover:bg-[#0e9645] text-white text-center font-black text-base sm:text-lg py-4 px-6 rounded-xl shadow-xl transform active:scale-95 transition-all duration-200 uppercase tracking-wide cursor-pointer"
+              className="w-full bg-[#0EBE32] hover:bg-[#0ca32b] text-white text-center font-black text-base sm:text-lg py-4 px-6 rounded-xl shadow-xl transform active:scale-95 transition-all duration-200 uppercase tracking-wide cursor-pointer"
             >
               QUERO O KIT COM DESCONTO
             </button>
@@ -45,7 +45,7 @@ export const Hero: React.FC<{ onCtaClick: () => void }> = ({ onCtaClick }) => {
           <div className="hidden md:block mt-8 w-full max-w-md">
             <button
               onClick={onCtaClick}
-              className="w-full bg-[#12B856] hover:bg-[#0e9645] text-white text-center font-black text-lg py-4 px-8 rounded-xl shadow-xl transform hover:-translate-y-0.5 active:scale-95 transition-all duration-200 uppercase tracking-wider cursor-pointer"
+              className="w-full bg-[#0EBE32] hover:bg-[#0ca32b] text-white text-center font-black text-lg py-4 px-8 rounded-xl shadow-xl transform hover:-translate-y-0.5 active:scale-95 transition-all duration-200 uppercase tracking-wider cursor-pointer"
             >
               QUERO O KIT COM DESCONTO
             </button>

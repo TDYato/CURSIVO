@@ -4,6 +4,7 @@ import { Hero } from './components/Hero';
 import { SignalsSection } from './components/SignalsSection';
 import { MethodSection } from './components/MethodSection';
 import { ActivitiesPreview } from './components/ActivitiesPreview';
+import { SocialProofSection } from './components/SocialProofSection';
 import { HowItWorks } from './components/HowItWorks';
 import { OfferSection } from './components/OfferSection';
 import { GuaranteeSection } from './components/GuaranteeSection';
@@ -132,6 +133,9 @@ export default function App() {
 
         {/* Activities Preview Carousel */}
         <ActivitiesPreview />
+
+        {/* Social Proof Section (Mães e professoras que já usam e recomendam) */}
+        <SocialProofSection />
 
         {/* How It Works Section */}
         <HowItWorks />

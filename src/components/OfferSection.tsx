@@ -19,11 +19,11 @@ export const OfferSection: React.FC<{ onBuyClick: () => void }> = ({ onBuyClick 
         {/* Price Box */}
         <div className="mb-4 mt-6">
           <p className="text-xs sm:text-sm text-gray-400 font-extrabold line-through uppercase">
-            De R$ 37,90 Por Apenas
+            De R$ 47,90 Por Apenas
           </p>
-          <div className="flex items-baseline justify-center space-x-1">
-            <span className="text-xl font-black text-emerald-600">R$</span>
-            <span className="text-4xl sm:text-5xl font-black text-[#12B856] tracking-tight">
+          <div className="flex items-baseline justify-center space-x-1 text-[#0EBE32]">
+            <span className="text-xl font-black text-[#0EBE32]">R$</span>
+            <span className="text-4xl sm:text-5xl font-black text-[#0EBE32] tracking-tight">
               15,00
             </span>
           </div>
@@ -32,7 +32,7 @@ export const OfferSection: React.FC<{ onBuyClick: () => void }> = ({ onBuyClick 
         {/* Comprar Agora CTA Button */}
         <button
           onClick={onBuyClick}
-          className="block w-full bg-[#12B856] hover:bg-[#0e9645] text-white font-black text-lg sm:text-xl py-4 rounded-xl shadow-xl hover:shadow-2xl transform active:scale-95 transition-all duration-200 uppercase tracking-wider cursor-pointer"
+          className="block w-full bg-[#0EBE32] hover:bg-[#0ca32b] text-white font-black text-lg sm:text-xl py-4 rounded-xl shadow-xl hover:shadow-2xl transform active:scale-95 transition-all duration-200 uppercase tracking-wider cursor-pointer"
         >
           COMPRAR AGORA
         </button>
