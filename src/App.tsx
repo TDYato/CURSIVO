@@ -11,7 +11,6 @@ import { PlansOfferSection } from './components/PlansOfferSection';
 import { HowItWorks } from './components/HowItWorks';
 import { GuaranteeSection } from './components/GuaranteeSection';
 import { Footer } from './components/Footer';
-import { CheckoutModal } from './components/CheckoutModal';
 import { DownsellModal } from './components/DownsellModal';
 import { LoginPage } from './components/LoginPage';
 import { MembersArea } from './components/MembersArea';
@@ -31,9 +30,7 @@ export default function App() {
     if (typeof window === 'undefined') return false;
     return !!localStorage.getItem('membros_auth');
   });
-  const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
   const [isDownsellOpen, setIsDownsellOpen] = useState(false);
-  const [checkoutPlan, setCheckoutPlan] = useState({ title: 'Plano Básico', price: '10,00' });
 
   // Sync with browser navigation (back/forward buttons)
   useEffect(() => {
@@ -80,20 +77,7 @@ export default function App() {
     const offerElement = document.getElementById('offer') || document.getElementById('oferta');
     if (offerElement) {
       offerElement.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      setIsCheckoutOpen(true);
     }
-  }, []);
-
-  const handleOpenCheckout = useCallback((plan?: { title: string; price: string }) => {
-    if (plan) {
-      setCheckoutPlan(plan);
-    }
-    setIsCheckoutOpen(true);
-  }, []);
-
-  const handleCloseCheckout = useCallback(() => {
-    setIsCheckoutOpen(false);
   }, []);
 
   const handleOpenDownsell = useCallback(() => {
@@ -110,8 +94,6 @@ export default function App() {
 
   const handleDeclineDownsell = useCallback(() => {
     setIsDownsellOpen(false);
-    setCheckoutPlan({ title: 'Plano Básico', price: '10,00' });
-    setIsCheckoutOpen(true);
   }, []);
 
   // Route: /login
@@ -189,14 +171,7 @@ export default function App() {
         onAccept={handleAcceptDownsell}
         onDecline={handleDeclineDownsell}
         checkoutUrl="https://pay.kiwify.com.br/bXd3PL9"
-      />
-
-      {/* Floating Interactive Checkout Modal */}
-      <CheckoutModal
-        isOpen={isCheckoutOpen}
-        onClose={handleCloseCheckout}
-        planTitle={checkoutPlan.title}
-        price={checkoutPlan.price}
+        basicPlanCheckoutUrl="https://pay.kiwify.com.br/lQDvHZo"
       />
     </div>
   );

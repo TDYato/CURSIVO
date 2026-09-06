@@ -6,6 +6,7 @@ interface DownsellModalProps {
   onAccept: () => void;
   onDecline: () => void;
   checkoutUrl?: string;
+  basicPlanCheckoutUrl?: string;
 }
 
 export const DownsellModal: React.FC<DownsellModalProps> = ({
@@ -14,6 +15,7 @@ export const DownsellModal: React.FC<DownsellModalProps> = ({
   onAccept,
   onDecline,
   checkoutUrl = 'https://pay.kiwify.com.br/bXd3PL9',
+  basicPlanCheckoutUrl = 'https://pay.kiwify.com.br/lQDvHZo',
 }) => {
   // Close on Escape key
   useEffect(() => {
@@ -164,8 +166,7 @@ export const DownsellModal: React.FC<DownsellModalProps> = ({
 
         {/* Botão Verde de Ação Principal */}
         <a
-          href={checkoutUrl}
-          onClick={onAccept}
+          href="https://pay.kiwify.com.br/bXd3PL9"
           className="w-full bg-[#12B856] hover:bg-[#0E9E48] text-white font-extrabold py-3.5 sm:py-4 px-5 sm:px-6 rounded-full shadow-lg shadow-emerald-500/20 text-xs sm:text-sm tracking-wide text-center uppercase cursor-pointer flex items-center justify-center gap-2 transition-all duration-200 hover:scale-[1.01] active:scale-[0.99] border-b-4 border-emerald-700"
         >
           <span>SIM, QUERO O PLANO COMPLETO POR R$ 15,90</span>
@@ -187,13 +188,13 @@ export const DownsellModal: React.FC<DownsellModalProps> = ({
         </a>
 
         {/* Link Secundário de Recusa */}
-        <button
-          type="button"
+        <a
+          href={basicPlanCheckoutUrl}
           onClick={onDecline}
           className="text-slate-400 hover:text-slate-600 text-xs font-bold underline cursor-pointer block mx-auto mt-3 transition-colors text-center"
         >
           Não, quero apenas o Plano Básico por R$ 10,00
-        </button>
+        </a>
       </div>
     </div>
   );
