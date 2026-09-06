@@ -177,7 +177,7 @@ export const PlansOfferSection: React.FC<{ onBasicPlanClick?: () => void }> = ({
             </div>
             <div className="pt-5">
               <a
-                href="https://pay.wiapy.com/QruNNp6WKqPx?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term="
+                href="https://pay.kiwify.com.br/DVPPskh"
                 className="w-full bg-action-green hover:bg-emerald-600 text-white font-black py-4.5 px-6 rounded-full shadow-lg text-xs sm:text-sm tracking-wide text-center uppercase cursor-pointer flex items-center justify-center gap-2 border-b-4 border-emerald-700 transition-colors"
                 tabIndex={0}
                 id="a885b4f3-3a63-e2db-517a-f72b9458a21c"

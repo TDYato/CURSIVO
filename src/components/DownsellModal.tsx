@@ -13,7 +13,7 @@ export const DownsellModal: React.FC<DownsellModalProps> = ({
   onClose,
   onAccept,
   onDecline,
-  checkoutUrl = 'https://pay.wiapy.com/QruNNp6WKqPx?offer=downsell_1590&utm_source=organic&utm_campaign=downsell_1590',
+  checkoutUrl = 'https://pay.kiwify.com.br/bXd3PL9',
 }) => {
   // Close on Escape key
   useEffect(() => {

@@ -184,6 +184,7 @@ export default function App() {
         onClose={handleCloseDownsell}
         onAccept={handleAcceptDownsell}
         onDecline={handleDeclineDownsell}
+        checkoutUrl="https://pay.kiwify.com.br/bXd3PL9"
       />
 
       {/* Floating Interactive Checkout Modal */}
